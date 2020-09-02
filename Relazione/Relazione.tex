@@ -8,6 +8,8 @@
 \usepackage{float}
 \usepackage{listings}
 \usepackage{color}
+\usepackage{hyperref}
+
 \lstloadlanguages{C,C++,csh,Java}
 
 \definecolor{red}{rgb}{0.6,0,0} 
@@ -71,7 +73,7 @@ backgroundcolor=\color{cloudwhite},
 
 \graphicspath{ {./images/} }
 
-\title{Ingegneria del software - Dama Multiplayer}
+\title{Ingegneria del software - Memory e Dama Multiplayer}
 \author{Fabrizio Corriera}
 \date{2019/2020}
 
@@ -89,7 +91,7 @@ backgroundcolor=\color{cloudwhite},
 
 \subsection{Obiettivo}
 L'obiettivo di questo documento consiste nel fornire una panoramica completa sul processo di pianificazione, analisi dei requisiti funzionali, studio delle risorse e sviluppo di un software utilizzando una strategia di tipo agile.
-Il software in questione è un videogioco 3D che ripropone il classico gioco da tavolo della dama con la possibilità di giocare con altri giocatori in locale o online.
+Il software in questione è un tool che presenta all'interno sia un videogioco 3D che ripropone il classico gioco da tavolo della dama con la possibilità di giocare con altri giocatori in locale o online, sia un videogioco 3D che ripropone il classico gioco del memory in locale tra due giocatori.
 
 \subsection{Solo Extreme Programming}
 Ho deciso di utilizzare una metodologia agile simile all'Extreme Programming (XP) ma adattata al lavoro in solitario.
@@ -148,15 +150,17 @@ Se possibile potrebbe essere necessario testare il codice su più di una macchin
 Infine, ovviamente tutto il codice deve aver passato positivamente tutti i test prima della release. Se viene trovato un bug bisogna creare dei test a riguardo.
 
 \subsection{Descrizione delle funzionalità del software}
-Il software che desideriamo implementare consiste in una rappresentazione 3D del gioco della dama, arricchita da una funzionalità multiplayer online e da una chat in-game. Ci aspettiamo che il software alla sua inizializzazione presenti un menù principale, con una grafica semplice ma d'impatto, e delle scelte da poter effettuare, ovvero:
+Il software che desideriamo implementare consiste nella possibilità di scegliere tra giocare ad una rappresentazione 3D del gioco della dama, arricchita da una funzionalità multiplayer online e da una chat in-game o ad una rappresentazione 3D del gioco del memory. Ci aspettiamo che il software alla sua inizializzazione presenti un menù principale, con una grafica semplice ma d'impatto, e delle scelte da poter effettuare, ovvero:
 
 \begin{enumerate}
-\item Iniziare una partita in locale contro un altro giocatore.
-\item Creare una stanza in cui ospitare una partita.
-\item Entrare in una stanza già esistente ed unirsi ad una partita.
+\item Scegliere tra Memory e Dama Multiplayer
+\item Iniziare una partita a Memory in locale contro un altro giocatore
+\item Iniziare una partita a Dama in locale contro un altro giocatore.
+\item Creare una stanza in cui ospitare una partita online di Dama.
+\item Entrare in una stanza già esistente ed unirsi ad una partita online di Dama.
 \end{enumerate}
 
-Dal menù si potrà anche inserire lo username con cui venire identificati durante le partite multiplayer (in caso di input vuoto si verrà identificati come host se si sta ospitando la partita o client se si è ospiti nella stanza di un altro giocatore).
+Dal menù della Dama si potrà anche inserire lo username con cui venire identificati durante le partite multiplayer (in caso di input vuoto si verrà identificati come host se si sta ospitando la partita o client se si è ospiti nella stanza di un altro giocatore).
 
 Se si sceglie una partita in locale, due giocatori potranno confrontarsi giocando sulla stessa macchina e la partità inizierà subito dopo aver selezionato l'opzione dal menù.
 
@@ -170,13 +174,17 @@ Vogliamo che venga fatto presente di chi è il turno attuale, e che venga segnal
 
 Durante la partita online sarà anche presente una chat in cui i due giocatori potranno scambiarsi messaggi in tempo reale mentre giocano. Nella chat sarà possibile scorrere i messaggi precedenti per leggerli o scriverne uno nuovo nell'apposita casella di input per poi inviarlo cliccando l'apposito tasto. I mittenti dei messaggi saranno evidenziati nella chat, in quanto i messaggi avranno un formato del tipo "Username: messaggio".
 
+Quando inizia una partita di Memory vogliamo che vengano sistemate 20 coppie di carte coperte sul tavolo da gioco in ordine casuale, e che i giocatori, durante il loro turno, possano girare due carte. Se queste due carte sono uguali tra loro, quel giocatore ottiene 1 punto e potrà continuare a scoprire le carte. Se la coppia di carte girate non corrisponde, il giocatore dovrà rigirarle e passare il turno
+
 \subsection{Analisi dei requisiti}
 Da questa breve descrizione possiamo individuare i requisiti di sistema del software, dividendoli in requisiti funzionali (descrivono ciò che il sistema dovrebbe fare) e requisiti non funzionali (non riguardano direttamente le funzioni fornite dal sistema ma ne specificano il comportamento, le politiche di organizzazione e sviluppo ecc). Partendo da questi requisiti scriveremo le User Stories che utilizzeremo durante lo sviluppo del progetto e che ci permetteranno di dividere il lavoro in maniera logica e incrementale.
 
 \begin{itemize}
 \item \textbf{Requisiti funzionali}
 \begin{itemize}
-\item Menù principale da dove si può procedere verso: partita locale, hosting di una partita, entrare in una stanza esistente.
+\item Menù principale dove è possibile scegliere tra Dama e Memory.
+\item Menù del Memory da dove si può procedere verso una partita locale con un altro giocatore o tornare indietro.
+\item Menù della Dama da dove si può procedere verso: partita locale, hosting di una partita, entrare in una stanza esistente o tornare indietro.
 \item Possibilità di definizione di uno username personalizzato.
 \item Sottomenù di hosting.
 \item Sottomenù di accesso ad una partita.
@@ -196,12 +204,12 @@ Da questa breve descrizione possiamo individuare i requisiti di sistema del soft
 \end{itemize}
 \end{itemize}
 
-\begin{figure}[H]
-\centering
-\includegraphics[scale=.5]{MainMenu}
-\caption{Screenshot del menù principale di gioco}
-\label{img:mainmenu}
-\end{figure}
+%\begin{figure}[H]
+%\centering
+%\includegraphics[scale=.5]{MainMenu}
+%\caption{Screenshot del menù di gioco della Dama}
+%\label{img:mainmenu}
+%\end{figure}
 
 \section{Sviluppo del software}
 In questa parte del documento verrà trattato tutto il processo di sviluppo del software discutendone gli strumenti, l'organizzazione, le strategie, i metodi e valutandone infine i risultati.
@@ -221,7 +229,7 @@ Nello sviluppo di questo software sono stati impiegati i seguenti strumenti:
 Suddividiamo il lavoro in maniera logica ed iterativa, individuando le caratteristiche del progetto che possono essere implementate in maniera "stand-alone", permettendoci quindi di poter sostenere delle release continue augurandoci un ritmo di almeno una release al giorno. Scriviamo quindi le user stories.
 \newline
 
-\textbf{\Large User stories}
+\textbf{\Large User stories 1}
 \begin{enumerate}
 \item Creazione scacchiera e pezzi
 \item Codifica del movimento dei pezzi
@@ -241,6 +249,20 @@ Suddividiamo il lavoro in maniera logica ed iterativa, individuando le caratteri
 \end{enumerate}
 
 Questa lista è stata stilata nell'ordine in cui le stories sono state prese in carico e le funzionalità da loro descritte implementate. Non tutte esistono dai primi istanti di vita del progetto, infatti la 12, la 13 e la 14 sono state inserite in un secondo momento per far fronte a delle necessità, per favorire  lo sviluppo di altre funzionalità o in generale per migliorare il risultato finale del progetto.
+
+A seguito della richiesta da parte del cliente dell'aggiunta di un secondo gioco (Memory) nel softwre, sono state aggiunte le seguenti storie:
+\newline
+
+\textbf{\Large User Stories 2}
+\begin{enumerate}
+\item Creazione tavolo e carte
+\item Codifica delle regole di gioco
+\item Codifica notifiche a schermo
+\item Creazione menù Memory e menù principale
+\item Perfezionamenti
+\end{enumerate}
+
+In questo caso le storie sono di numero molto inferiore perché dovranno essere esaurite in un tempo molto più ristretto, e ci si è basati maggiormente sulle macrofunzionalità di gioco, suddividendo così il progetto in poche ma grandi aree tematiche (ciò è stato reso possibile anche dalla maggiore semplicità del gioco da implementare).
 
 \subsection{Sviluppo}
 \begin{itemize}
@@ -419,8 +441,59 @@ Poi un carattere pipe ($|$) ricoprirà il ruolo di divisore tra i parametri pass
 	\end{itemize}
 \end{itemize}
 
-\section{Codice}
-In questa sezione verrà mostrato il codice sviluppato per il progetto.
+Dopo aver discusso col cliente e aver preso in carico le modifiche concordate, ricomincia il processo di sviluppo:
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.5]{MemoryFlowChart}
+\caption{Diagramma di flusso di una partita di memory usato come riferimento durante lo sviluppo}
+\label{img:MemoryFC}
+\end{figure}
+
+\begin{itemize}
+\item \textbf{Inizio - 31/08/2020}
+	\begin{itemize}
+	\item \textbf{Inizio Storia 1}
+	\item Creazione del modello 3D del tavolo da gioco e delle carte. Si è scelto uno stile grafico affine a quello del gioco della Dama già implementato
+	\item Creazione dello script MemoryTable.cs: conterrà la maggior parte del codice riguardante il gioco. Qui verranno implementati i metodi che regoleranno il funzionamento della partita
+	\item Creazione dello script Card.cs usato per definire la classe Card che rappresenta le carte del gioco e ne contiene gli attributi ed i metodi
+	\item Creazione dei metodi GenerateDeck, GenerateCard, GenerateCopy, ShuffleDeck e PositionCards di MemoryTable.cs: il primo chiamerà gli altri 4 rispettivamente per creare le prime 20 carte di cui è composto il mazzo, creare le restanti 40 carte copie delle prime 20, mescolare il mazzo (usando dei numeri randomici per ogni carta, che detteranno di quante posizioni verrà spostata la suddetta carta) e posizionare le carte del mazzo coperte sul tavolo da gioco
+	\item \textbf{Fine Storia 1}
+	\item \textbf{Inizio Storia 2}
+	\item Creazione del metodo CardClicker di MemoryTable.cs che viene chiamato nel metodo Update per controllare se l'utente cliccando con il tasto sinistro del mouse clicchi o meno una carta
+	\item Creazione del metodo FlipCard di MemoryTable.cs che viene chiamato da CardClicker se si clicka effettivamente su una carta: questo metodo fa girare una carta al gioctore di turno se essa non è già girata e se è la prima ad essere stata girata durante il turno, gli permette di girarne un'altra, salvando il valore di quella appena girata. Se invece quando viene girata la carta ne esiste una già girata, verrà chiamato il metodo IsAMatch di Card.cs. Se le due carte sono una coppia verrà incrementato il punteggio a video del giocatore di turno, cancellato il riferimento alla carta girata in precedenza, diminuito il numero di coppie di carte ancora in gioco e se questo numero arriva a 0 si conclude il gioco. Se invece le due carte non sono una coppia, verrà settato un timer che dopo 1.5 secondi, chiamerà il metodo ReFlip di MemoryTable.cs, che rimetterà le carte in posizione coperta e infine verrà cambiato il giocatore di turno
+	\item Creazione del metodo IsAMatch di Card.cs per verificare se le due carte (quella dalla cui istanza viene chiamato il metodo e quella che viene passa come parametro) sono uguali sia nel seme che nel valore di carta. Se lo sono il metodo restituirà un valore booleano vero, altrimenti, oltre a restituire falso, resetterà i valori delle due carte e ne cancellerà i riferimenti salvati
+	\item Creazione del metodo EndGame di MemoryTable.cs che viene chiamato nel momento in cui non ci sono più coppie coperte in gioco. Semplicemente in questo metodo se il punteggio del primo giocatore è superiore a quello del secondo faremo apparire una notifica che ci avvertirà della vittoria del primo giocatore; in caso opposto ci notificherà della vittoria del secondo; nel caso in cui i due punteggi si eguaglino verrà comunicato il pareggio. Dopo 2 secondi si tornerà al menù del memory
+	\item \textbf{Fine Storia 2}
+	\item \textbf{Release 1.1:} In questa release inseriamo il gioco del Memory completo e perfettamente funzionante, anche se mancano ancora delle accortezze per quanto riguarda l'interfaccia
+	\end{itemize}
+\item \textbf{Fine - 31/08/2020}
+\item \textbf{Inizio - 01/09/2020}
+	\begin{itemize}
+	\item \textbf{Inizio Storia 3}
+	\item Nell'editor di Unity creiamo 4 pannelli con testo: due che indicano il punteggio dei due giocatori, uno che indica il numero di coppie rimaste e uno, invisibile di default che useremo per notificare la fine della partita
+	\item Creazione del metodo UpdateScore di MemoryTable.cs che viene chiamato quando uno dei due giocatori segna un punto. Questo metodo modifica il testo dei 3 pannelli testuali su schermo, aggiornando ad ogni chiamata i 3 valori (il punteggio del primo giocatore, il punteggio del secondo giocatore e il numero di coppie rimanenti).
+	\item \textbf{Fine Storia 3}
+	\item \textbf{Release 1.2:} Questa release non apporta modifiche di tipo logico o funzionale al gioco, ma lo rende più userfriendly mostrando a video i punteggi dei giocatori e le coppie di carte rimaste, rendendolo più simile ad un gioco
+	\item \textbf{Inizio Storia 4}
+	\item Creazione delle scene MemoryMenu e MainMenu dall'editor di Unity. Nella prima inseriamo un pulsante che permette di iniziare una partita a memory ed uno che permette di cambiare scena e tornare al menù principale. Nel secondo inseriamo due pulsanti che permettano di navigare da questo menù ai menù di Dama o Memory
+	\item Creazione degli script GameMenagerMemo.cs e GameManagerMain.cs dove sono stati codificati i funzionamenti dei pulsanti rispettivamente del menù di Memory e del menù principale
+	\item Modifica della scena Menu e dello script GameManager.cs, per inserire un nuovo pulsante che permetta di tornare al menù principale dal menù della Dama
+	\item \textbf{Fine Storia 4}
+	\item \textbf{Inizio Storia 5}
+	\item Modifica delle scene MemoryMenu e MainMenu, dove andremo ad applicare lo stesso standard estetico del menù di Dama, inseriamo inoltre lo skybox e l'effetto acqua sulle nuove scene (Memory, MemoryMenu, MainMenu) e i modelli 3D dei giochi privati di script ed inseriti per scopi estetici
+	\item \textbf{Fine Storia 5}
+	\item \textbf{Release 1.3:} Questa release inserisce perfettamente un menù principale e lo imposta come prima scena del videogioco, permette la navigazione tra i vari menù e permette sia di giocare al memory che alla dama nella stessa sessione del software. Il progetto allo stato attuale è pronto per la sua pubblicazione ed è in uno stato tale in cui sarebbe possibile implementare ulteriori giochi senza troppo lavoro
+	\end{itemize}
+\item \textbf{Fine - 01/09/2020}
+\end{itemize}
+
+\section{Conclusione e Codice}
+Il progetto è stato completato nei tempi previsti ed entro la data di consegna prefissata. La documentazione qui prodotta presenta un'analisi metodologica ed una descrizione del lavoro svolto abbastanza miticolosa, cercando di mantenere un linguaggio che per lo più risulti comprensibile anche ad un ipotetico cliente, o generico lettore, sprovvisto di competenze in ambito informatico. Il software risulta funzionante e privo di bug ed è stato testato per questo tipo di indagine più volte.
+
+Possiamo quindi in conclusione affermare che lo sviluppo del progetto si è concluso con risultato positivo.
+
+Qui di seguito verrà mostrato il codice sviluppato per il progetto, reperibile anche all'indirizzo: \url{https://github.com/MTheHead61/SoftwareEngProject}.
 
 \begin{lstlisting}[language={[Sharp]C}, caption={CheckersBoard.cs}, label={CheckersBoardScript}]
 using System.Collections.Generic;
@@ -1421,6 +1494,347 @@ public class GameManager : MonoBehaviour
 	}
 	
 }
+\end{lstlisting}
+
+\begin{lstlisting}[language={[Sharp]C}, caption={MemoryTable.cs}, label={MemoryTableScript}]
+using System;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
+public class MemoryTable : MonoBehaviour
+{
+	public static MemoryTable Instance { set; get; }
+	
+	public bool canPlay=true;
+	
+	//public int numPlayers=2;
+	
+	public int actualPlayer=0;
+	
+	public int pairsCount = 20;
+	public int[] scores = new int[2];
+	
+	public Card[] deck = new Card[40];
+	public GameObject[] cardsPrefab;
+	
+	public Card shownCard=null;
+	public Card shownCard2=null;
+	private float timeFlip;
+	
+	public Text score1;
+	public Text score2;
+	public Text pairsLeft;
+	public CanvasGroup winAlert;
+	
+	private bool gameIsOver=false;
+	private float winTime;
+	
+	private void Start()
+	{
+		Instance = this;
+		
+		GenerateDeck();
+	}
+	
+	private void Update()
+	{
+		CardClicker();
+		UpdateReflip();
+		if(gameIsOver)
+		{
+			if(Time.time - winTime > 2.0f)
+			{
+				SceneManager.LoadScene("MemoryMenu");
+			}
+		}
+	}
+	
+	private void UpdateReflip()
+	{
+		if(shownCard2)
+		{
+			if(Time.time - timeFlip > 1.5f)
+			{
+				ReFlip(shownCard2, shownCard);
+				if(actualPlayer==0)
+				{
+					actualPlayer=1;
+				}
+				else
+				{
+					actualPlayer=0;
+				}
+				shownCard=null;
+				shownCard2=null;
+				canPlay=true;
+			}
+		}
+	}
+	
+	private void CardClicker()
+	{
+		if(!Camera.main)
+		{
+			Debug.Log("Camera main non trovata");
+			return;
+		}
+		if(Input.GetMouseButtonDown(0))
+		{
+			RaycastHit hit;
+			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+			if(Physics.Raycast(ray, out hit, 100.0f))
+			{
+				if(hit.transform!=null)
+				{
+					Card c;
+					
+					if(c=hit.transform.GetComponent<Card>())
+					{
+						if(canPlay){
+							if(!c.isShown)
+								FlipCard(c);
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	private void FlipCard(Card c)
+	{
+		if(!c.isShown)
+		{
+			canPlay=false;
+			c.transform.Rotate(Vector3.right * 180);
+			c.isShown = true;
+		}
+		else
+		{
+			return;
+		}
+		if(shownCard)
+		{
+			if(c.IsAMatch(shownCard))
+			{
+				scores[actualPlayer]++;
+				//Debug.Log("Il giocatore " + (actualPlayer+1) + " ha " + scores[actualPlayer] + " punti.");
+				pairsCount--;
+				//Debug.Log("Restano " + pairsCount + " coppie.");
+				UpdateScore();
+				shownCard = null;
+				canPlay=true;
+				if(pairsCount==0)
+					EndGame();
+			}
+			else
+			{
+				shownCard2=c;
+				timeFlip=Time.time;
+			}
+		}
+		else
+		{
+			shownCard = c;
+			canPlay=true;
+		}
+	}
+	
+	private void ReFlip(Card c1, Card c2)
+	{
+		c1.transform.Rotate(Vector3.right * 180);
+		c2.transform.Rotate(Vector3.right * 180);
+	}
+	
+	private void EndGame()
+	{
+		if(scores[0]>scores[1])
+		{
+			winAlert.GetComponentInChildren<Text>().text = "Vince il player 1!";
+			//Debug.Log("Il giocatore 1 vince!");
+		}
+		else if(scores[0]<scores[1])
+		{
+			winAlert.GetComponentInChildren<Text>().text = "Vince il player 2!";
+			//Debug.Log("Il giocatore 2 vince!");
+		}
+		else
+		{
+			winAlert.GetComponentInChildren<Text>().text = "Pareggio!";
+		}
+		winAlert.alpha = 1;
+		gameIsOver=true;
+		winTime=Time.time;
+	}
+	
+	private void GenerateDeck()
+	{
+		for(int i=0;i<20;i++)
+		{
+			GenerateCard(i);
+		}
+		for(int i=20;i<40;i++)
+		{
+			GenerateCopy(i);
+		}
+		ShuffleDeck();
+		PositionCards();
+	}
+	
+	private void GenerateCard(int i)
+	{
+		GameObject go = Instantiate(cardsPrefab[i]) as GameObject;
+		go.transform.SetParent(transform);
+		Card c = go.GetComponent<Card>();
+		c.cardValue = (i%10)+1;
+		c.isHearts = (i%10==i)?false:true;
+		deck[i] = c;
+	}
+	
+	private void GenerateCopy(int i)
+	{
+		int i_up=i-20;
+		GameObject go = Instantiate(cardsPrefab[i_up]) as GameObject;
+		go.transform.SetParent(transform);
+		Card c = go.GetComponent<Card>();
+		c.cardValue = (i_up%10)+1;
+		c.isHearts = (i_up%10==i_up)?false:true;
+		deck[i] = c;
+	}
+	
+	private void ShuffleDeck()
+	{
+		System.Random r = new System.Random();
+		for(int i=0;i<40;i++)
+		{
+			int j = (i+r.Next())%40;
+			ChangeCards(i,j);
+		}
+	}
+	
+	private void ChangeCards(int i, int j)
+	{
+		Card c = deck[i];
+		deck[i] = deck[j];
+		deck[j] = c;
+	}
+	
+	private void PositionCards()
+	{
+		float x = 0.24f;
+		float y = 0.2f;
+		int i = 0;
+		foreach(Card c in deck)
+		{
+			c.transform.position = (Vector3.right * x) + (Vector3.forward * y) + (Vector3.up * 0.42f);
+			c.transform.Rotate(Vector3.right * 180);
+			x -= 0.07f;
+			i ++;
+			if(i%8==0)
+			{
+				y-=0.1f;
+				x=0.24f;
+			}
+		}
+	}
+	
+	private void UpdateScore()
+	{
+		score1.text = scores[0].ToString();
+		score2.text = scores[1].ToString();
+		pairsLeft.text = "Coppie rimaste: " + pairsCount.ToString();
+	}
+}
+\end{lstlisting}
+
+\begin{lstlisting}[language={[Sharp]C}, caption={Card.cs}, label={CardScript}]
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Card : MonoBehaviour
+{
+	public bool isShown=false;
+	public int cardValue;
+	public bool isHearts;
+	
+	public bool IsAMatch(Card c)
+	{
+		if(!(this.isHearts ^ c.isHearts)&&(this.cardValue == c.cardValue))
+		{
+			return true;
+		}
+		else
+		{
+			this.isShown=false;
+			c.isShown=false;
+			return false;
+		}
+	}
+}
+\end{lstlisting}
+
+\begin{lstlisting}[language={[Sharp]C}, caption={GameManagerMain.cs}, label={GameManagerMainScript}]
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using System;
+using UnityEngine.SceneManagement;
+
+public class GameManagerMain : MonoBehaviour
+{
+	public static GameManagerMain Instance { set; get; }
+	
+	private void Start()
+	{
+		Instance = this;
+	}
+	
+	public void MemoryButton()
+	{
+		SceneManager.LoadScene("MemoryMenu");
+	}
+	
+	public void CheckersButton()
+	{
+		SceneManager.LoadScene("Menu");
+	}
+}
+\end{lstlisting}
+
+\begin{lstlisting}[language={[Sharp]C}, caption={GameManagerMemo.cs}, label={GameManagerMemoScript}]
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using System;
+using UnityEngine.SceneManagement;
+
+public class GameManagerMemo : MonoBehaviour
+{
+	public static GameManagerMemo Instance { set; get; }
+	
+	private void Start()
+	{
+		Instance = this;
+	}
+	
+	public void GameButton()
+	{
+		SceneManager.LoadScene("Memory");
+	}
+	
+	public void BackButton()
+	{
+		SceneManager.LoadScene("MainMenu");
+	}
+}
+
 \end{lstlisting}
 
 \end{document}
