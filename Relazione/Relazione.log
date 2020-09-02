@@ -1,0 +1,508 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.2)  31 AUG 2020 14:00
+entering extended mode
+**./Relazione.tex
+(Relazione.tex
+LaTeX2e <2018-12-01>
+
+("C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\article.cl
+s"
+Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
+("C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\size12.clo
+"
+File: size12.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
+)
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\inputenc.s
+ty"
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+)
+("C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\babel.s
+ty"
+Package: babel 2019/07/19 3.33 The Babel package
+
+("C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\switch.
+def"
+File: switch.def 2019/07/19 3.33 Babel switching mechanism
+)
+*************************************
+* Local config file bblopts.cfg used
+*
+
+("C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/arabi\bblopts.c
+fg"
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+("C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/babel-italian\i
+talian.ldf"
+Language: italian 2019/01/05 v.1.4.01 Italian support for the babel system
+
+("C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\babel.d
+ef"
+File: babel.def 2019/07/19 3.33 Babel common definitions
+\babel@savecnt=\count88
+\U@D=\dimen103
+
+("C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\txtbabe
+l.def")
+\bbl@dirlevel=\count89
+)
+\it@lettering=\count90
+\it@doublequoteactive=\count91
+\it@ISOcompliance=\count92
+))
+("C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/etoolbox\etoolb
+ox.sty"
+Package: etoolbox 2018/08/19 v2.5f e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count93
+)
+("C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsmath
+.sty"
+Package: amsmath 2018/12/01 v2.17b AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+
+("C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amstext
+.sty"
+Package: amstext 2000/06/29 v2.01 AMS text
+
+("C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsgen.
+sty"
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks16
+\ex@=\dimen104
+))
+("C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsbsy.
+sty"
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen105
+)
+("C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsopn.
+sty"
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count94
+LaTeX Info: Redefining \frac on input line 223.
+\uproot@=\count95
+\leftroot@=\count96
+LaTeX Info: Redefining \overline on input line 385.
+\classnum@=\count97
+\DOTSCASE@=\count98
+LaTeX Info: Redefining \ldots on input line 482.
+LaTeX Info: Redefining \dots on input line 485.
+LaTeX Info: Redefining \cdots on input line 606.
+\Mathstrutbox@=\box27
+\strutbox@=\box28
+\big@size=\dimen106
+LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
+\macc@depth=\count99
+\c@MaxMatrixCols=\count100
+\dotsspace@=\muskip10
+\c@parentequation=\count101
+\dspbrk@lvl=\count102
+\tag@help=\toks17
+\row@=\count103
+\column@=\count104
+\maxfields@=\count105
+\andhelp@=\toks18
+\eqnshift@=\dimen107
+\alignsep@=\dimen108
+\tagshift@=\dimen109
+\tagwidth@=\dimen110
+\totwidth@=\dimen111
+\lineht@=\dimen112
+\@envbody=\toks19
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2844.
+LaTeX Info: Redefining \] on input line 2845.
+)
+("C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\longtable
+.sty"
+Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)+ FMi change
+\LTleft=\skip46
+\LTright=\skip47
+\LTpre=\skip48
+\LTpost=\skip49
+\LTchunksize=\count106
+\LTcapwidth=\dimen113
+\LT@head=\box29
+\LT@firsthead=\box30
+\LT@foot=\box31
+\LT@lastfoot=\box32
+\LT@cols=\count107
+\LT@rows=\count108
+\c@LT@tables=\count109
+\c@LT@chunks=\count110
+\LT@p@ftn=\toks21
+)
+("C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphi
+cx.sty"
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyval
+.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks22
+)
+("C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphi
+cs.sty"
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig.s
+ty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\gr
+aphics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+("C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\pd
+ftex.def"
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen114
+\Gin@req@width=\dimen115
+)
+("C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amssym
+b.sty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+("C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amsfon
+ts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+("C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/float\float.sty
+"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count111
+\float@exts=\toks23
+\float@box=\box33
+\@float@everytoks=\toks24
+\@floatcapt=\box34
+)
+("C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listin
+gs.sty"
+\lst@mode=\count112
+\lst@gtempboxa=\box35
+\lst@token=\toks25
+\lst@length=\count113
+\lst@currlwidth=\dimen116
+\lst@column=\count114
+\lst@pos=\count115
+\lst@lostspace=\dimen117
+\lst@width=\dimen118
+\lst@newlines=\count116
+\lst@lineno=\count117
+\lst@maxwidth=\dimen119
+
+("C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstmis
+c.sty"
+File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
+\c@lstnumber=\count118
+\lst@skipnumbers=\count119
+\lst@framebox=\box36
+)
+("C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listin
+gs.cfg"
+File: listings.cfg 2019/09/10 1.8c listings configuration
+))
+Package: listings 2019/09/10 1.8c (Carsten Heinz)
+
+("C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\color.
+sty"
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+
+("C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\co
+lor.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+)
+("C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstlan
+g1.sty"
+File: lstlang1.sty 2019/09/10 1.8c listings language file
+)
+("C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstmis
+c.sty"
+File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
+)
+Package color Info: Redefining color red on input line 13.
+Package color Info: Redefining color blue on input line 14.
+Package color Info: Redefining color green on input line 15.
+Package color Info: Redefining color cyan on input line 16.
+
+("C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption
+.sty"
+Package: caption 2020/05/10 v3.4j Customizing captions (AR)
+
+("C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption
+3.sty"
+Package: caption3 2020/05/10 v1.11 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 61.
+\captionmargin=\dimen120
+\captionmargin@=\dimen121
+\captionwidth=\dimen122
+\caption@tempdima=\dimen123
+\caption@indent=\dimen124
+\caption@parindent=\dimen125
+\caption@hangindent=\dimen126
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count120
+\c@continuedfloat=\count121
+Package caption Info: float package is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: longtable package is loaded.
+
+("C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\ltcapti
+on.sty"
+Package: ltcaption 2018/08/26 v1.4a longtable captions (AR)
+)) (Relazione.aux)
+\openout1 = `Relazione.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Info: Redefining \it@ocap on input line 78.
+LaTeX Info: Redefining \it@ccap on input line 78.
+
+
+File italian.ldf warning: 
+italian.ldf    With OT1 encoding guillemets are poorly faked
+italian.ldf    Use T1 encoding
+italian.ldf    or specify a font with command \CaporaliFrom
+italian.ldf    See the documentation concerning the babel-italian typesetting 
+italian.ldf    on input line 78.
+
+
+("C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\sup
+p-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count122
+\scratchdimen=\dimen127
+\scratchbox=\box37
+\nofMPsegments=\count123
+\nofMParguments=\count124
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count125
+\MPscratchDim=\dimen128
+\MPnumerator=\count126
+\makeMPintoPDFobject=\count127
+\everyMPtoPDFconversion=\toks27
+)
+("C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\epstop
+df-base.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+("C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\infw
+arerr.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+("C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\grfext
+.sty"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+("C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\kvde
+finekeys.sty"
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+
+("C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ltxc
+mds.sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
+("C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\kvopti
+ons.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+("C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\kvse
+tkeys.sty"
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+("C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\etex
+cmds.sty"
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+("C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\iflu
+atex.sty"
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+))))
+("C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\pdft
+excmds.sty"
+Package: pdftexcmds 2019/07/25 v0.30 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+("C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ifpd
+f.sty"
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+)
+\c@lstlisting=\count128
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Try loading font information for U+msa on input line 80.
+
+("C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.f
+d"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 80.
+
+("C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.f
+d"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1
+
+{C:/Users/Fabrizio/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+(Relazione.toc)
+\tf@toc=\write3
+\openout3 = `Relazione.toc'.
+
+ [1]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 99.
+
+("C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omscmr.fd"
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 99.
+ [1]
+<./images/XP.jpg, id=15, 622.325pt x 421.575pt>
+File: ./images/XP.jpg Graphic file (type jpg)
+<use ./images/XP.jpg>
+Package pdftex.def Info: ./images/XP.jpg  used on input line 127.
+(pdftex.def)             Requested size: 311.16173pt x 210.78697pt.
+ [2 <./images/XP.jpg>] [3] [4] [5]
+<./images/MainMenu.png, id=29, 600.74437pt x 441.90094pt>
+File: ./images/MainMenu.png Graphic file (type png)
+<use ./images/MainMenu.png>
+Package pdftex.def Info: ./images/MainMenu.png  used on input line 201.
+(pdftex.def)             Requested size: 300.37144pt x 220.94992pt.
+ [6 <./images/MainMenu.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 221--223
+
+ []
+
+[7] [8] [9] [10]
+<./images/GameFlowChart.jpg, id=49, 614.295pt x 1016.79875pt>
+File: ./images/GameFlowChart.jpg Graphic file (type jpg)
+<use ./images/GameFlowChart.jpg>
+Package pdftex.def Info: ./images/GameFlowChart.jpg  used on input line 297.
+(pdftex.def)             Requested size: 307.14674pt x 508.39813pt.
+ [11] [12 <./images/GameFlowChart.jpg>] [13] [14]
+Overfull \hbox (6.9264pt too wide) in paragraph at lines 337--338
+[]\OT1/cmr/m/n/12 Creazione del me-to-do Con-nect-To-Ser-ver-But-ton di Ga-me-M
+a-na-ger.cs,
+ []
+
+[15] [16]
+Overfull \hbox (24.45816pt too wide) in paragraph at lines 359--360
+[]\OT1/cmr/m/n/12 Nello script Ser-ver.cs, nel me-to-do OnIn-co-ming-Da-ta, nel
+ ca-se "CWHO",
+ []
+
+[17] [18] [19]
+Overfull \hbox (8.79999pt too wide) in paragraph at lines 404--405
+[]\OT1/cmr/m/n/12 Creazione me-to-do Chat-Mes-sa-ge e Send-Mes-sa-ge di Chec-ke
+r-sBoard.cs
+ []
+
+[20]
+("C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstlan
+g1.sty"
+File: lstlang1.sty 2019/09/10 1.8c listings language file
+)
+Overfull \hbox (6.0pt too wide) in paragraph at lines 425--425
+[][][][][][][] 
+ []
+
+[21] [22] [23] [24] [25] [26] [27] [28] [29] [30] [31]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 895--895
+[][][][][][][] 
+ []
+
+[32] [33] [34]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 1004--1004
+[][][][][][][] 
+ []
+
+[35] [36] [37] [38]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 1179--1179
+[][][][][][][] 
+ []
+
+[39] [40] [41]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 1318--1318
+[][][][][][][] 
+ []
+
+[42] [43] [44] [45] (Relazione.aux) ) 
+Here is how much of TeX's memory you used:
+ 6654 strings out of 492895
+ 96828 string characters out of 3122335
+ 450760 words of memory out of 3000000
+ 10463 multiletter control sequences out of 15000+200000
+ 13833 words of font info for 54 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 41i,7n,42p,1602b,1751s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/Fabrizio/AppData/Local/Programs/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Fabrizio/AppData
+/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/
+Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8
+.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmr12.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Fabrizio/AppData/Local/Programs/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Fabrizio/AppData/Loc
+al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Fabriz
+io/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+<C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmtt10.pfb>
+Output written on Relazione.pdf (47 pages, 790542 bytes).
+PDF statistics:
+ 195 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+
