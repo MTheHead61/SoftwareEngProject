@@ -174,7 +174,7 @@ Vogliamo che venga fatto presente di chi è il turno attuale, e che venga segnal
 
 Durante la partita online sarà anche presente una chat in cui i due giocatori potranno scambiarsi messaggi in tempo reale mentre giocano. Nella chat sarà possibile scorrere i messaggi precedenti per leggerli o scriverne uno nuovo nell'apposita casella di input per poi inviarlo cliccando l'apposito tasto. I mittenti dei messaggi saranno evidenziati nella chat, in quanto i messaggi avranno un formato del tipo "Username: messaggio".
 
-Quando inizia una partita di Memory vogliamo che vengano sistemate 20 coppie di carte coperte sul tavolo da gioco in ordine casuale, e che i giocatori, durante il loro turno, possano girare due carte. Se queste due carte sono uguali tra loro, quel giocatore ottiene 1 punto e potrà continuare a scoprire le carte. Se la coppia di carte girate non corrisponde, il giocatore dovrà rigirarle e passare il turno
+Quando inizia una partita di Memory vogliamo che vengano sistemate 20 coppie di carte coperte sul tavolo da gioco in ordine casuale, e che i giocatori, durante il loro turno, possano girare due carte. Se queste due carte sono uguali tra loro, quel giocatore ottiene 1 punto e potrà continuare a scoprire le carte. Se la coppia di carte girate non corrisponde, il giocatore dovrà rigirarle e passare il turno.
 
 \subsection{Analisi dei requisiti}
 Da questa breve descrizione possiamo individuare i requisiti di sistema del software, dividendoli in requisiti funzionali (descrivono ciò che il sistema dovrebbe fare) e requisiti non funzionali (non riguardano direttamente le funzioni fornite dal sistema ma ne specificano il comportamento, le politiche di organizzazione e sviluppo ecc). Partendo da questi requisiti scriveremo le User Stories che utilizzeremo durante lo sviluppo del progetto e che ci permetteranno di dividere il lavoro in maniera logica e incrementale.
@@ -204,12 +204,59 @@ Da questa breve descrizione possiamo individuare i requisiti di sistema del soft
 \end{itemize}
 \end{itemize}
 
-%\begin{figure}[H]
-%\centering
-%\includegraphics[scale=.5]{MainMenu}
-%\caption{Screenshot del menù di gioco della Dama}
-%\label{img:mainmenu}
-%\end{figure}
+\subsection{Diagrammi dei casi d'uso}
+Presentiamo qui di seguito i diagrammi dei casi d'uso, o diagrammi use case, del nostro software. Un diagramma use case è un diagramma UML che viene usato per descrivere un set di azioni o funzionalità che un sistema può o dovrebbe svolgere con l'ausilio di uno o più utenti esterni.
+
+Qui di seguito vediamo la traduzione in diagrammi use case di quanto è stato detto finora descrivendo le funzionalità del nostro software:
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.35]{UseCaseMain}
+\caption{Diagramma Use Case del menù di gioco}
+\label{img:usecasemain}
+\end{figure}
+
+Nella figura \ref{img:usecasemain} è rappresentato il diagramma dei casi d'uso in riferimento al menù principale del software che ci accingiamo a sviluppare, e da qui possiamo vedere che l'utente al momento dell'avvio del programma può scegliere tra accedere al sottomenù della Dama e accedere al sottomenù del Memory.
+
+Nel primo caso avrà davanti a se la possibilità di impostare uno username, tornare al menù precedente o di scegliere la modalità di gioco tra quelle proposte: locale oppure online con il ruolo di host o di guest (in questi ultimi due casi, come è possibile vedere, servirà l'ausilio di un ulteriore utente per poter avviare una partita di dama).
+
+Nel secondo caso potrà scegliere tra avviare una partita a Memory o tornare al menù precedente.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.5]{UseCaseCheckers}
+\caption{Diagramma Use Case di una partita in locale a Dama}
+\label{img:usecasecheckers}
+\end{figure}
+
+L'utente, una volta che avvierà una partita di Dama, verrà riconosciuto come Giocatore di Dama, una generalizzazione del caso utente. Egli all'interno della partita di Dama potrà selezionare col click del mouse e la pressione continua del tasto sia il pezzo da muovere che la sua destinazione, trascinandolo verso di essa; oppure, rilasciando un pezzo della scacchiera già selezionato, potrà deselezionarlo o muoverlo.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.5]{UseCaseCheckersMultiplayer}
+\caption{Diagramma Use Case di una partita online a Dama}
+\label{img:usecasecheckers}
+\end{figure}
+
+Nel caso di una partita online a Dama, il Giocatore di Dama Online, generalizzazione del Giocatore di Dama, potrà scrivere dei messaggi in chat ed inviarli.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.5]{UseCaseMemory}
+\caption{Diagramma Use Case di una partita a Memory}
+\label{img:usecasememory}
+\end{figure}
+
+Nel caso invece di una partita a Memory, chiameremo la generalizzazione dell'Utente, Giocatore di Memory, ed egli, una volta avviata la partita di Memory, potrà selezionare la prima carta del suo turno e la seconda.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.3]{UseCaseGeneral}
+\caption{Diagramma Use Case generale del software}
+\label{img:usecasegeneral}
+\end{figure}
+
+Nella figura \ref{img:usecasegeneral} possiamo vedere il diagramma Use Case completo del software, dove gli attori e le loro generalizzazioni sono collegati tra loro ed è possibile vedere una panoramica completa dei casi d'uso del progetto.
 
 \section{Sviluppo del software}
 In questa parte del documento verrà trattato tutto il processo di sviluppo del software discutendone gli strumenti, l'organizzazione, le strategie, i metodi e valutandone infine i risultati.
@@ -488,7 +535,37 @@ Dopo aver discusso col cliente e aver preso in carico le modifiche concordate, r
 \item \textbf{Fine - 01/09/2020}
 \end{itemize}
 
-\section{Conclusione e Codice}
+\subsection{Class Diagram}
+Il diagramma delle classi (class diagram) serve a fornire una vista strutturale del sistema in termini di attributi e metodi delle classi e le relazioni che intercorrono tra loro. Il diagramma fa riferimento alle classi effettivamente realizzate e alle strutture dati effettivamente impiegate, infatti non lo definiamo uno schema concettuale, ma implementativo.
+
+Nelle classi gli attributi sono scritti nella forma:\newline
+\textbf{\textit{NomeAttributo : TipoAttributo = ValoreDefault}}
+
+E i metodi nella forma:\newline
+\textbf{\textit{NomeMetodo(ListaTipoParametri) : TipoValoreRestituito}}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.30]{ClassDiagram}
+\caption{Diagramma delle classi del sistema}
+\label{img:classdiagram}
+\end{figure}
+
+Nella figura \ref{img:classdiagram} possiamo vedere il diagramma delle classi sviluppato a seguito della conclusione del progetto per dare una rappresentazione completa delle classi e delle loro relazioni. Come è possibile notare non esistono classi frutto di aggregazioni, questo perché sia nel caso delle pedine della dama che delle carte del memory, non mi era sembrato conveniente, a livello di sfruttamento delle risorse, creare una ipotetica superclasse di pezzi che avrei chiamato Team o una superclasse di carte che avrei chiamato Deck. Invece le classi Piece e Card vengono utilizzate per definire le istanze di oggetti fondamentali all'interno di CheckersBoard e MemoryTable, ovvero Pieces e Deck (definiti come array di oggetti di classe rispettivamente Piece e Card). Infatti le loro occorrenze all'interno dei due script sono numeri precisi: 24 (12 pedine bianche e 12 pedine nere) occorrenze di Piece dentro CheckersBoard e 40 (10 carte per seme ripetute due volte) occorrenze di Card dentro MemoryTable; va fatto notare inoltre che le occorrenze di Piece sono comprese tra 1 e 24 poiché esse possono variare nel tempo, visto che nel momento in cui una pedina viene mangiata durante una partita, la sua istanza come GameObject viene distrutta, però in nessun caso le pedine potranno essere di numero inferiore ad 1, quindi durante il ciclo di vita di un'istanza di CheckersBoard, il numero di istanze di Piece può diminuire fino ad un minimo di 1.
+
+Salta inoltre subito all'occhio che in nessuna relazione è mai presente più di una occorrenza di CheckersBoard o di MemoryTable: questo perché in nessun caso esisterà contemporaneamente più di una istanza delle due classi.
+
+La classe MemoryTable è legata solo da un'altra relazione con GameManagerMemo, in quanto esse richiamano il costruttore dell'altra classe nel momento in cui distruggono la propria istanza. Medesimo discorso vale per la relazione tra CheckersBoard e GameManager.
+
+Sia GameManager che GameManagerMemo sono a loro volta in relazione con GameManagerMain, in quanto anche in questo caso esse chiamano vicendevolmente il costruttore dell'altra classe nel momento in cui vengono distrutte.
+
+GameManager presenta poi una relazione con Server e Client, in quanto è lei stessa a chiamare dentro di se i metodi Init di Server e Start di Client.
+
+Server a sua volta presenta una relazione con CheckersBoard, poiché sarà la stessa CheckersBoard, che prima di distruggere la propria istanza, distruggerà l'istanza di Server (così come quella di Client). Inoltre, la classe server è in relazione uno a molti con ServerClient, la classe che definisce l'oggetto che rappresenta i client connessi al server, oltre che con Client ovviamente, dal momento che essa è la classe con cui interagisce maggiormente tramite il metodo Broadcast e OnIncomingData.
+
+Allo stesso modo Client, oltre che con Server, GameManager e CheckersBoard è in relazione con la classe GameClient, la classe definita per descrivere gli oggetti che rappresentano le istanze degli altri client connessi al server.
+
+\section{Conclusioni e codice}
 Il progetto è stato completato nei tempi previsti ed entro la data di consegna prefissata. La documentazione qui prodotta presenta un'analisi metodologica ed una descrizione del lavoro svolto abbastanza miticolosa, cercando di mantenere un linguaggio che per lo più risulti comprensibile anche ad un ipotetico cliente, o generico lettore, sprovvisto di competenze in ambito informatico. Il software risulta funzionante e privo di bug ed è stato testato per questo tipo di indagine più volte.
 
 Possiamo quindi in conclusione affermare che lo sviluppo del progetto si è concluso con risultato positivo.
