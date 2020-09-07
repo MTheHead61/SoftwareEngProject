@@ -235,7 +235,7 @@ L'utente, una volta che avvierà una partita di Dama, verrà riconosciuto come G
 \centering
 \includegraphics[scale=.5]{UseCaseCheckersMultiplayer}
 \caption{Diagramma Use Case di una partita online a Dama}
-\label{img:usecasecheckers}
+\label{img:usecasecheckersonline}
 \end{figure}
 
 Nel caso di una partita online a Dama, il Giocatore di Dama Online, generalizzazione del Giocatore di Dama, potrà scrivere dei messaggi in chat ed inviarli.
@@ -564,6 +564,26 @@ GameManager presenta poi una relazione con Server e Client, in quanto è lei ste
 Server a sua volta presenta una relazione con CheckersBoard, poiché sarà la stessa CheckersBoard, che prima di distruggere la propria istanza, distruggerà l'istanza di Server (così come quella di Client). Inoltre, la classe server è in relazione uno a molti con ServerClient, la classe che definisce l'oggetto che rappresenta i client connessi al server, oltre che con Client ovviamente, dal momento che essa è la classe con cui interagisce maggiormente tramite il metodo Broadcast e OnIncomingData.
 
 Allo stesso modo Client, oltre che con Server, GameManager e CheckersBoard è in relazione con la classe GameClient, la classe definita per descrivere gli oggetti che rappresentano le istanze degli altri client connessi al server.
+
+\subsection{Deployment/Component Diagram}
+Il Deployment Diagram è un diagramma strutturale che mostra la configurazione del sistema durante la sua esecuzione, mettendone in risalto i nodi, le dipendenze e le associazioni. Questo tipo di diagrammi viene utilizzato per visualizzare e specificare le caratteristiche di sistemi embedded, distribuiti, client/server. Potremmo definire il Deployment Diagram come un tipo di Class Diagram che si focalizza sui nodi di un sistema.
+
+Il Component Diagram scompone il sistema analizzato nelle sue funzionalità ad alto livello. Come il Deployment Diagram, possiamo definire il Component Diagram come un tipo di Class Diagram, che in questo caso invece si focalizza sulle componenti di un sistema utilizzate per l'implementazione della visione statica statica di un sistema.
+
+Solitamente è possibile creare un diagramma ibrido tra Deployment e Component, risultando in una visione che mostra la relazione tra le componenti Software (SW) ed Hardware (HW) del sistema.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.35]{Deployment_Component}
+\caption{Deployment/Component Diagram di una sessione di una partita online a dama}
+\label{img:dcdiagram}
+\end{figure}
+
+Nella figura \ref{img:dcdiagram} possiamo vedere il deployment/component diagram del sistema durante una partita online di dama. Ho deciso di non includere la rappresentazione del resto dell'esecuzione del sistema in quanto non aggiungerebbe nulla di nuovo rispetto a quanto è stato già illustrato dal class diagram precedentemente mostrato nella figura \ref{img:classdiagram}.
+
+A livello hardware identifichiamo due soli nodi principali: il PC dell'host e il PC del guest. All'interno dell'architettura del sistema essi sono di pari livello, connessi tra loro tramite internet con l'utilizzo di una connessione TCP; verrebbe quasi da interpretarla come una connessione P2P se non fosse per le componenti che vengono istanziate durante il run-time dell'applicazione. Infatti vediamo la differenziazione tra Client e Server tra i due PC non a livello HW ma a livello SW: l'host, oltre alla sua istanza di Client, identica a quella del guest, presenta la propria istanza Server, che ha un ruolo chiave nel gestire la connessione a livello applicativo tra i due nodi. Le dipendenze tra i vari componenti e risorse SW del sistema li abbiamo già visti rapresentati in precedenza.
+
+Notiamo inoltre che è necessario collegare tra loro nel diagramma anche le interfacce di gioco derivate dal componente CheckersBoard: ciò è dovuto alla connessione in real-time che permette di visualizzare una qualsiasi modifica ad una delle due componenti anche sull'altro dispositivo in tempo reale.
 
 \section{Conclusioni e codice}
 Il progetto è stato completato nei tempi previsti ed entro la data di consegna prefissata. La documentazione qui prodotta presenta un'analisi metodologica ed una descrizione del lavoro svolto abbastanza miticolosa, cercando di mantenere un linguaggio che per lo più risulti comprensibile anche ad un ipotetico cliente, o generico lettore, sprovvisto di competenze in ambito informatico. Il software risulta funzionante e privo di bug ed è stato testato per questo tipo di indagine più volte.

@@ -11,4 +11,5 @@
 \contentsline {subsection}{\numberline {2.2}Progettazione}{11}{subsection.2.2}% 
 \contentsline {subsection}{\numberline {2.3}Sviluppo}{13}{subsection.2.3}% 
 \contentsline {subsection}{\numberline {2.4}Class Diagram}{31}{subsection.2.4}% 
-\contentsline {section}{\numberline {3}Conclusioni e codice}{33}{section.3}% 
+\contentsline {subsection}{\numberline {2.5}Deployment/Component Diagram}{33}{subsection.2.5}% 
+\contentsline {section}{\numberline {3}Conclusioni e codice}{34}{section.3}% 
