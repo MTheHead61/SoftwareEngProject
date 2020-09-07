@@ -265,7 +265,7 @@ In questa parte del documento verrà trattato tutto il processo di sviluppo del 
 Nello sviluppo di questo software sono stati impiegati i seguenti strumenti:
 
 \begin{itemize}
-\item{\textbf{Unity:}} Unity è un motore grafico multipiattaforma sviluppato da Unity Technologies che consente lo sviluppo di videogiochi e altri contenuti interattivi, quali visualizzazioni architettoniche o animazioni 3D in tempo reale. La scelta è ricaduta su Unity piuttosto che sugli altri concorrenti sul mercato in quanto esso offre un piano gratuito completo di ogni funzionalità, avevo già delle esperienze di programmazione in C\# e soprattutto, al momento della scrittura di questo documento (Agosto 2020), Unity è uno dei motori grafici più utilizzati nel panorama professionale dello sviluppo di videogiochi.
+\item{\textbf{Unity:}} Unity è un motore grafico multipiattaforma sviluppato da Unity Technologies che consente lo sviluppo di videogiochi e altri contenuti interattivi, quali visualizzazioni architettoniche o animazioni 3D in tempo reale. La scelta è ricaduta su Unity piuttosto che sugli altri concorrenti sul mercato in quanto esso offre un piano gratuito completo di ogni funzionalità, avevo già delle esperienze di programmazione in C\# e soprattutto, al momento della scrittura di questo documento (Agosto 2020), Unity è uno dei motori grafici più utilizzati nel panorama professionale dello sviluppo di videogiochi. Inoltre Unity presenta un framework built-in per l'automated testing.
 \item{\textbf{Microsoft Visual Studio:}} Microsoft Visual Studio (o più comunemente Visual Studio) è un ambiente di sviluppo integrato (Integrated development environment o IDE) sviluppato da Microsoft. In questo caso la scelta è stata quasi ovvia, in quanto l'integrazione tra Unity e Visual Studio è totalmente supportata dai loro sviluppatori.
 \item{\textbf{\LaTeX:}} \LaTeX è un linguaggio di markup per la preparazione di testi, basato sul programma di composizione tipografica \TeX ed è stato utilizzato per la scrittura di questo documento.
 \item{\textbf{Asset grafici gratuiti:}} Alcuni asset grafici utilizzati in questo progetto sono asset gratuiti o con licenza freeware acquistati sull'asset store di Unity. Lo skybox e l'acqua utilizzati nella scenografia del gioco sono asset gratuiti utilizzati in maniera lecita secondo le norme delle loro licenze.
@@ -533,6 +533,132 @@ Dopo aver discusso col cliente e aver preso in carico le modifiche concordate, r
 	\item \textbf{Release 1.3:} Questa release inserisce perfettamente un menù principale e lo imposta come prima scena del videogioco, permette la navigazione tra i vari menù e permette sia di giocare al memory che alla dama nella stessa sessione del software. Il progetto allo stato attuale è pronto per la sua pubblicazione ed è in uno stato tale in cui sarebbe possibile implementare ulteriori giochi senza troppo lavoro
 	\end{itemize}
 \item \textbf{Fine - 01/09/2020}
+\end{itemize}
+
+\subsection{Testing}
+In parallelo al processo di sviluppo sono stati svolti gli unit test sul codice a mano a mano che veniva implementato. Utilizzando Unity Test Framework i test sono stati svolti in maniera automatizzata, secondo la filosofia XP, permettendo così di risparmiare tempo nei processi di debug e di testing manuale.
+
+Gli script di testing sono comunemente divisi in 3 fasi:
+\begin{enumerate}
+\item Arrange: gli input e le condizioni iniziali vengono esplicitati
+\item Act: il metodo sotto test viene chiamato per ottenere il risultato
+\item Assert: verificare che il risultato ottenuto sia quello sperato
+\end{enumerate}
+Così facendo è possibile verificare qualunque metodo di una classe, associando ad ognuno di questi un test che ne assicuri il corretto funzionamento in varie sezioni critiche.
+
+Nello specifico gli unit test servono a testare singolarmente ogni aspetto del sistema, e questi sono quelli che sono stati svolti (sia in maniera automatizzata che non):
+\newline
+
+\textbf{\Large GameManagerMain}
+\begin{itemize}
+\item Avvio corretto
+\item Tutti i pulsanti eseguono correttamente l'animazione su metodo MouseOver()
+\item MemoryButton() su metodo OnClick() esegue correttamente il cambio di scena, caricando la scena MemoryMenu
+\item CheckersButton() su metodo OnClick() esegue correttamente il cambio di scena, caricando la scena Menu
+\end{itemize}
+
+\textbf{\Large GameManagerMemo}
+\begin{itemize}
+\item Avvio corretto
+\item Tutti i pulsanti eseguono correttamente l'animazione su metodo MouseOver()
+\item GameButton() su metodo OnClick() esegue correttamente il cambio di scena, caricando la scena Memory
+\item BackButton() su metodo OnClick() esegue correttamente il cambio di scena, caricando la scena MainMenu
+\end{itemize}
+
+\textbf{\Large GameManager}
+\begin{itemize}
+\item Avvio corretto
+\item Tutti i pulsanti eseguono correttamente l'animazione su metodo MouseOver()
+\item LocalButton() su metodo OnClick() esegue correttamente il cambio di scena, caricando la scena Game
+\item MainButton() su metodo OnClick() esegue correttamente il cambio di scena, caricando la scena MainMenu
+\item HostButton() su metodo OnClick() cambia correttamente la visibilità dei Layer del Canvas nella scena Menu
+\item HostButton() crea correttamente una istanza di Server e Client
+\item ConnectButton() su metodo OnClick() cambia correttamente la visibilità dei Layer del Canvas nella scena Menu
+\item ConnectToServerButton() su metodo OnClick() connette correttamente al dispositivo corrispondente all'indirizzo IP, se esso accetta la connessione sulla socket predefinita, altrimenti non accade nulla
+\item BackButton() su metodo OnClick() cambia correttamente la visibilità dei Layer del Canvas della scena Menu e distrugge correttamente le istanze di Client e Server se esistono
+\item La scena Game viene caricata correttamente se ci si unisce per primi ad un Server o se almeno un Client si connette all'istanza Server sul dispositivo
+\end{itemize}
+
+\textbf{\Large CheckersBoard}
+\begin{itemize}
+\item Avvio corretto
+\item La scacchiera ed il bordo vengono caricati correttamente
+\item Le coordinate della posizione del mouse sopra la scacchiera vengono lette correttamente dal metodo UpdateMouseOver()
+\item Le collisioni del click del mouse sono limitate alla scacchiera
+\item I click esterni alla scacchiera non vengono registrati
+\item Le pedine vengono create e posizionate in maniera corretta ed in numero corretto
+\item Al click sulla tessera della scacchiera su cui si trova una pedina la pedina cambierà correttamente posizione
+\item Al rilascio del click la pedina tornerà correttamente alla sua posizione originale se non sarà stata rilasciata in una posizione che risulti in una mossa "legale"
+\item Se la pedina viene rilasciata fuori dalla scacchiera tornerà alla propria posizione originale
+\item Se la pedina viene rilasciata in uno spazio vuoto diagonalmente adiacente alla sua posizione originale nella direzione corretta o in uno spazio vuoto diagonalmente distante 2 tessere dalla sua posizione originale nella direzione corretta con la posizione in mezzo occupata da una pedina avversaria o senza considerare la direzione corretta se la pedina è una regina, la mossa sarà considerata valida
+\item Se la pedina compie una mossa valida tornerà alla sua posizione veritcale precedente, nella nuova posizione raggiunta
+\item Se la pedina ha compiuto una mossa valida superando una pedina avversaria e spostandosi di due posizioni allora della pedina avversaria in mezzo (la pedina mangiata) viene cancellata correttamente l'istanza
+\item Non è possibile muovere durante il turno avversario o muovere le pedine avversarie
+\item Inizia il giocatore bianco
+\item Se la partita è online, il giocatore bianco è l'host
+\item Se un giocatore ha compiuto una mossa durante il suo turno non potrà agire fino a che non sarà nuovamente il proprio turno
+\item Se un giocatore ha concluso il suo turno il turno passa al giocatore successivo
+\item Se una o più pedine possono mangiare il giocatore sarà costretto a muovere una di quelle pedine
+\item Se una pedina appena mossa ha mangiato si trova in posizione di poter mangiare ancora dovrà farlo, rimandando di fatto la fine del turno del giocatore
+\item Se una pedina raggiunge l'altro capo della scacchiera viene promossa a regina
+\item Gli oggetti Highlight vengono caricati correttamente ad inizio partita nella loro posizione corretta
+\item Quando viene individuata una pedina costretta a mangiare viene cambiata correttamente la posizione dello/degli oggetti Highlight
+\item Al termine del turno o della mossa gli oggetti Highlight vengono riportati nella loro posizione iniziale
+\item La Chat viene caricata correttamente se si tratta di una partita online
+\item Nello spazio di input si può scrivere correttamente
+\item Il pulsante di invio dei messaggi funziona correttamente inviando un messaggio se ne è stato composto uno nello spazio di input
+\item I messaggi inviati e ricevuti vengono mostrati correttamente nel pannello di chat
+\item Il pannello di chat scorre correttamente in su ed in giù e mantiene costanti le proporzioni laterali dei pannelli contenenti i messaggi
+\item Il nome  del mittente del messaggio viene mostrato correttamente
+\item L'opacità dell'oggetto AlertCanvas è settata correttamente all'avvio della partita
+\item Il testo dell'oggetto AlertCanvas viene modificato correttamente quando viene chiamato il metodo Alert()
+\item L'opacità dell'oggetto AlertCanvas viene modificata e resettata correttamente e nei tempi prefissati
+\item Quando l'ultima pedina di un dato colore viene mangiata, il giocatore che ha appena mosso vince
+\item Quando un giocatore vince viene visualizzato correttamente il messaggio di vittoria (o sconfitta) e viene caricata la scena Menu distruggendo tutte le istanze attuali dopo il tempo corretto
+\item Quando la partita viene caricata vengono notificati correttamente i nomi dei due giocatori
+\item Quando un giocatore finisce il turno viene notificato correttamente il turno del prossimo giocatore
+\end{itemize}
+
+\textbf{\Large Client}
+\begin{itemize}
+\item Avvio corretto
+\item La richiesta di connessione al server funziona correttamente
+\item Il metodo Update() mantiene correttamente il client in costante attesa di messagi da parte del server
+\item Il client invia e riceve correttamente i messaggi dialogando con il server a cui è connesso
+\item Il metodo OnIncomingData() permette di ricevere e interpretare correttamente i messaggi ricevuti dal server e risponde con i messaggi corretti o le azioni corrette
+\item Se si connette un nuovo utente il client lo inserirà correttamente nella sua lista di client
+\item La connessione Tcp con il server del client viene chiusa correttamente nell'eventualità nell'eventualità della distruzione del client o della chiusura dell'applicazione
+\item La classe GameClient funziona in maniera adeguata allo scopo di rappresentare gli altri client connessi al server
+\end{itemize}
+
+\textbf{\Large Server}
+\begin{itemize}
+\item Alla chiamata del metodo Init() il server si inizializza correttamente e si mette in ascolto sulla socket 6321
+\item Il server fa il check dei client connessi nel metodo Update() e se sono disconnessi ne chiude la connessione e poi li rimuove, altrimenti controlla se il client ha inviato dei messaggi e li legge
+\item Il metodo AcceptTcp() aggiunge correttamente il client che ha inviato la richiesta di connessione alla lista dei client connessi e notifica gli altri client della connessione
+\item Il server riceve ed invia correttamente messaggi dialogando con i client connessi
+\item Il metodo Broadcast ed il suo relativo override funzionano correttamente
+\item Il sistema di messaggi di OnIncomingData, permette di interpretare correttamente i messaggi ricevuti dal client e invia le risposte corrette
+\item La classe ServerClient funziona in maniera adeguata allo scopo di rappresentare i client connessi
+\end{itemize}
+
+\textbf{\Large MemoryTable}
+\begin{itemize}
+\item Avvio corretto
+\item Il tavolo viene caricato correttamente
+\item Il mazzo di carte viene generato correttamente
+\item Le carte vengono posizionate correttamente sul tavolo
+\item Il BoxCollider funziona correttamente e il click del mouse seleziona correttamente ogni carta
+\item Al click la carta viene girata correttamente eseguendo il metodo Flip() e l'attributo isShown vien settato a true
+\item Se viene clickata una carta con isShown==true essa non eseguirà il metodo Flip()
+\item Chiamanfo il metodo Flip() viene correttamente modificata la posizione della carta, ruotandola sul fianco di 180 gradi
+\item Se il giocatore di turno clicka su una seconda carta invocandone il metodo Flip() ne verrà chiamato anche il metodo IsAMatch() passando come parametro la carta selezionata prima, restituendo correttamente true se le carte hanno uguale seme e uguale valore o false in caso contrario
+\item Se il metodo IsAMatch restituisce false la posizione delle due carte torna quella originale e il loro attributo isShown viene resettato a false
+\item Se le carte sono una coppia il punteggio del giocatore aumenta correttamente, mentre il numero di coppie rimanenti diminuisce correttamente
+\item Se le carte non sono una coppia il turno passa al giocatore successivo
+\item Se il numero di coppie rimanenti raggiunge lo 0 la partita si conclude
+\item Il giocatore col punteggio più alto verrà considerato vincitore e apparirà correttamente un alert che lo comunicherà
+\item A seguito dell'alert dopo un tempo corretto verrà caricata la scena MemoryMenu distruggendo ogni istanza dell'attuale scena
 \end{itemize}
 
 \subsection{Class Diagram}

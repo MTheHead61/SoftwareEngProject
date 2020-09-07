@@ -78,8 +78,14 @@ public class GameManager : MonoBehaviour
 			c.clientName = nameInput.text;
 			if(c.clientName == "")
 				c.clientName = "Client";
-			c.ConnectToServer(hostAddress, 6321);
-			connectMenu.SetActive(false);
+			if(c.ConnectToServer(hostAddress, 6321))
+			{
+				connectMenu.SetActive(false);
+			}
+			else
+			{
+				Destroy(c.gameObject);
+			}
 		}
 		catch (Exception e)
 		{

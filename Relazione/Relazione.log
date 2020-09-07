@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.2)  7 SEP 2020 11:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.2)  7 SEP 2020 19:57
 entering extended mode
 **./Relazione.tex
 (Relazione.tex
@@ -517,37 +517,37 @@ been already used, duplicate ignored
 l.117 	\item C
               ollective code ownership: ognuno è egualmente responsabile de...
 [1]
-<./images/XP.jpg, id=85, 622.325pt x 421.575pt>
+<./images/XP.jpg, id=90, 622.325pt x 421.575pt>
 File: ./images/XP.jpg Graphic file (type jpg)
 <use ./images/XP.jpg>
 Package pdftex.def Info: ./images/XP.jpg  used on input line 129.
 (pdftex.def)             Requested size: 311.16173pt x 210.78697pt.
  [2 <./images/XP.jpg>] [3] [4] [5] [6]
-<./images/UseCaseMain.jpg, id=113, 1016.79875pt x 777.90625pt>
+<./images/UseCaseMain.jpg, id=118, 1016.79875pt x 777.90625pt>
 File: ./images/UseCaseMain.jpg Graphic file (type jpg)
 <use ./images/UseCaseMain.jpg>
 Package pdftex.def Info: ./images/UseCaseMain.jpg  used on input line 214.
 (pdftex.def)             Requested size: 355.8849pt x 272.27126pt.
  [7 <./images/UseCaseMain.jpg>]
-<./images/UseCaseCheckers.jpg, id=120, 250.9375pt x 201.75375pt>
+<./images/UseCaseCheckers.jpg, id=125, 250.9375pt x 201.75375pt>
 File: ./images/UseCaseCheckers.jpg Graphic file (type jpg)
 <use ./images/UseCaseCheckers.jpg>
 Package pdftex.def Info: ./images/UseCaseCheckers.jpg  used on input line 227.
 (pdftex.def)             Requested size: 125.46843pt x 100.87662pt.
-<./images/UseCaseCheckersMultiplayer.jpg, id=121, 268.00125pt x 201.75375pt>
+<./images/UseCaseCheckersMultiplayer.jpg, id=126, 268.00125pt x 201.75375pt>
 File: ./images/UseCaseCheckersMultiplayer.jpg Graphic file (type jpg)
 <use ./images/UseCaseCheckersMultiplayer.jpg>
 Package pdftex.def Info: ./images/UseCaseCheckersMultiplayer.jpg  used on input
  line 236.
 (pdftex.def)             Requested size: 134.00029pt x 100.87662pt.
-<./images/UseCaseMemory.jpg, id=122, 255.95625pt x 201.75375pt>
+<./images/UseCaseMemory.jpg, id=127, 255.95625pt x 201.75375pt>
 File: ./images/UseCaseMemory.jpg Graphic file (type jpg)
 <use ./images/UseCaseMemory.jpg>
 Package pdftex.def Info: ./images/UseCaseMemory.jpg  used on input line 245.
 (pdftex.def)             Requested size: 127.9778pt x 100.87662pt.
 
 [8 <./images/UseCaseCheckers.jpg> <./images/UseCaseCheckersMultiplayer.jpg>]
-<./images/UseCaseGeneral.jpg, id=129, 1395.2125pt x 1248.665pt>
+<./images/UseCaseGeneral.jpg, id=134, 1395.2125pt x 1248.665pt>
 File: ./images/UseCaseGeneral.jpg Graphic file (type jpg)
 <use ./images/UseCaseGeneral.jpg>
 Package pdftex.def Info: ./images/UseCaseGeneral.jpg  used on input line 254.
@@ -568,7 +568,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 300--302
  []
 
 [12] [13] [14] [15]
-<./images/GameFlowChart.jpg, id=184, 614.295pt x 1016.79875pt>
+<./images/GameFlowChart.jpg, id=189, 614.295pt x 1016.79875pt>
 File: ./images/GameFlowChart.jpg Graphic file (type jpg)
 <use ./images/GameFlowChart.jpg>
 Package pdftex.def Info: ./images/GameFlowChart.jpg  used on input line 366.
@@ -592,7 +592,7 @@ r-sBoard.cs
  []
 
 [25]
-<./images/MemoryFlowChart.jpg, id=228, 360.34625pt x 1056.94875pt>
+<./images/MemoryFlowChart.jpg, id=233, 360.34625pt x 1056.94875pt>
 File: ./images/MemoryFlowChart.jpg Graphic file (type jpg)
 <use ./images/MemoryFlowChart.jpg>
 Package pdftex.def Info: ./images/MemoryFlowChart.jpg  used on input line 495.
@@ -602,20 +602,26 @@ Overfull \vbox (18.97307pt too high) has occurred while \output is active []
 
 
 [27 <./images/MemoryFlowChart.jpg>] [28] [29] [30]
-<./images/ClassDiagram.jpg, id=251, 1250.6725pt x 1088.065pt>
+Underfull \hbox (badness 10000) in paragraph at lines 549--551
+
+ []
+
+[31] [32] [33] [34] [35] [36]
+<./images/ClassDiagram.jpg, id=284, 1250.6725pt x 1088.065pt>
 File: ./images/ClassDiagram.jpg Graphic file (type jpg)
 <use ./images/ClassDiagram.jpg>
-Package pdftex.def Info: ./images/ClassDiagram.jpg  used on input line 549.
+Package pdftex.def Info: ./images/ClassDiagram.jpg  used on input line 675.
 (pdftex.def)             Requested size: 375.20465pt x 326.42203pt.
- [31 <./images/ClassDiagram.jpg>] [32]
-<./images/Deployment_Component.jpg, id=263, 1008.76875pt x 428.60126pt>
+ [37] [38 <./images/ClassDiagram.jpg>] [39]
+<./images/Deployment_Component.jpg, id=300, 1008.76875pt x 428.60126pt>
 File: ./images/Deployment_Component.jpg Graphic file (type jpg)
 <use ./images/Deployment_Component.jpg>
 Package pdftex.def Info: ./images/Deployment_Component.jpg  used on input line 
-577.
+703.
 (pdftex.def)             Requested size: 353.07436pt x 150.01268pt.
- [33 <./images/Deployment_Component.jpg>]
-Overfull \hbox (19.65591pt too wide) in paragraph at lines 593--594
+
+[40 <./images/Deployment_Component.jpg>]
+Overfull \hbox (19.65591pt too wide) in paragraph at lines 719--720
 \OT1/cmr/m/n/12 le an-che al-l'in-di-riz-zo: []$\OT1/cmtt/m/n/12 https : / / gi
 thub . com / MTheHead61 / SoftwareEngProject$[]\OT1/cmr/m/n/12 . 
  []
@@ -625,65 +631,70 @@ thub . com / MTheHead61 / SoftwareEngProject$[]\OT1/cmr/m/n/12 .
 g1.sty"
 File: lstlang1.sty 2019/09/10 1.8c listings language file
 )
-Overfull \hbox (6.0pt too wide) in paragraph at lines 595--595
+Overfull \hbox (6.0pt too wide) in paragraph at lines 721--721
 [][][][][][][] 
  []
 
-[34] [35] [36] [37] [38] [39] [40] [41] [42] [43] [44]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 1065--1065
-[][][][][][][] 
- []
-
-[45] [46] [47]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 1174--1174
-[][][][][][][] 
- []
-
-[48] [49] [50] [51]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 1349--1349
+[41] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 1191--1191
 [][][][][][][] 
  []
 
 [52] [53] [54]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 1488--1488
+Overfull \hbox (6.0pt too wide) in paragraph at lines 1300--1300
 [][][][][][][] 
  []
 
-[55] [56] [57]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 1596--1596
+[55] [56] [57] [58]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 1475--1475
 [][][][][][][] 
  []
 
-[58] [59] [60] [61] [62]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 1851--1851
+[59] [60] [61]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 1614--1614
 [][][][][][][] 
  []
 
-[63]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 1878--1878
+[62] [63]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 1722--1722
 [][][][][][][] 
  []
 
-[64]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 1907--1907
+[64] [65] [66] [67] [68] [69]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 1977--1977
 [][][][][][][] 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1937.
-[65]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1937.
+[70]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 2004--2004
+[][][][][][][] 
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 2033--2033
+[][][][][][][] 
+ []
+
+[71]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2063.
+ [72]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2063.
  (Relazione.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1937.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1937.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2063.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2063.
 
 Package rerunfilecheck Info: File `Relazione.out' has not changed.
-(rerunfilecheck)             Checksum: EEF812E926D140AFCD6F4AFF393CAD27;871.
+(rerunfilecheck)             Checksum: E76B23DB2783436525723E405D8707F7;929.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 11688 strings out of 492895
- 172465 string characters out of 3122335
- 530314 words of memory out of 3000000
- 14030 multiletter control sequences out of 15000+200000
+ 11700 strings out of 492895
+ 172565 string characters out of 3122335
+ 523415 words of memory out of 3000000
+ 14031 multiletter control sequences out of 15000+200000
  14361 words of font info for 56 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  36i,7n,42p,1602b,1984s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -701,9 +712,9 @@ Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Fabrizi
 o/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><
 C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
 /cm/cmtt12.pfb>
-Output written on Relazione.pdf (67 pages, 1117076 bytes).
+Output written on Relazione.pdf (74 pages, 1131903 bytes).
 PDF statistics:
- 2062 PDF objects out of 2073 (max. 8388607)
- 1439 named destinations out of 1440 (max. 500000)
- 155 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2103 PDF objects out of 2487 (max. 8388607)
+ 1450 named destinations out of 1728 (max. 500000)
+ 163 words of extra memory for PDF output out of 10000 (max. 10000000)
 
